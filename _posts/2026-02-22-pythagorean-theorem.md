@@ -3,6 +3,7 @@ layout: post
 date: 2026-02-22 10:00:00 +0900
 title: "三平方の定理（ピタゴラスの定理）について"
 categories: [mathematics]
+permalink: /posts/pythagorean-theorem/
 ---
 
 # 三平方の定理（ピタゴラスの定理）について
