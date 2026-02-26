@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.excerpt | default: site.description }}">
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
+{% if page.layout == 'post' %}
+  <!-- Add specific post styles or syntax highlighting CSS if needed -->
+{% endif %}
+
+<!-- Favicon -->
+<!-- <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}"> -->

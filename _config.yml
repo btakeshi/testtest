@@ -1,0 +1,14 @@
+title: My Jekyll Theme
+author: Your Name
+description: A Jekyll theme for GitHub Pages.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+github_username:  your-github-username
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# For category/tag pages, you typically need to configure permalinks and potentially
+# create specific layout files like _layouts/category_index.html and _layouts/tag_index.html.
+# Jekyll can auto-generate these if you have posts with categories/tags and the site is configured.
+# For theme usage, ensure your site's _config.yml has these settings or uses a plugin like jekyll-archives.

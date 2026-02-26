@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    {% comment %} Add social media links or other footer content here {% endcomment %}
+    {% if site.github_username %}
+      <p>Powered by <a href="https://github.com/{{ site.github_username }}">GitHub</a></p>
+    {% endif %}
+  </div>
+</footer>

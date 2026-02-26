@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% comment %} Add more navigation links as needed {% endcomment %}
+        <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+        {% comment %} 
+          Example for categories/tags pages if you create them. 
+          Jekyll can generate these automatically based on `_layouts/category.html` and `_layouts/tag.html`
+          and permalink configuration in _config.yml.
+        {% endcomment %}
+        {% comment %}
+        <li><a href="{{ '/categories.html' | relative_url }}">Categories</a></li>
+        <li><a href="{{ '/tags.html' | relative_url }}">Tags</a></li>
+        {% endcomment %}
+      </ul>
+    </nav>
+  </div>
+</header>

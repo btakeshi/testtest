@@ -1,0 +1,51 @@
+{% include head.html %}
+<body class="post-page">
+  {% include header.html %}
+  <main class="container">
+    <article class="post-full">
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        Posted on {{ page.date | date: "%Y-%m-%d" }}
+        {% if page.categories.size > 0 %}
+          in {{ page.categories | join: ", " }}
+        {% endif %}
+        {% if page.tags.size > 0 %}
+          Tags: {{ page.tags | join: ", " }}
+        {% endif %}
+      </p>
+      <div class="post-content">
+        {{ content }}
+      </div>
+      
+      {# 
+        Category and Tag Pages:
+        Jekyll can automatically generate category and tag pages if the site's _config.yml
+        is set up to support them (e.g., using permalinks and potentially plugins like jekyll-archives).
+        The links below assume such a setup exists.
+        For example, a site might have:
+        _layouts/category_index.html
+        _layouts/tag_index.html
+        and permalink configurations in _config.yml.
+      #}
+      {% if page.categories.size > 0 %}
+        <div class="post-categories">
+          <strong>Categories:</strong>
+          {% for category in page.categories %}
+            <a href="{{ site.baseurl }}/categories.html#{{ category | slugify }}">{{ category }}</a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          <strong>Tags:</strong>
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags.html#{{ tag | slugify }}">{{ tag }}</a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+  </main>
+  {% include footer.html %}
+</body>
