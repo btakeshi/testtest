@@ -10,12 +10,12 @@ title: Home
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
     </li>
   {% endfor %}
 </ul>
 
 <p>Or explore by category:</p>
 <ul>
-  <li><a href="/categories/mathematics/">Mathematics</a></li>
+  <li><a href="{{ '/categories/mathematics/' | prepend: site.baseurl }}">Mathematics</a></li>
 </ul>
